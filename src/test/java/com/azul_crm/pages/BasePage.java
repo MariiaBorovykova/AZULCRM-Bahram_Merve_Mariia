@@ -23,6 +23,9 @@ public class BasePage {
 
     @FindBy(css = "#menu-popup-user-menu")
     public WebElement optionsUnderProfileName;
+
+    @FindBy(xpath = "//div[@class='menu-popup-items']/*")
+    public List<WebElement> optionsUnderProfileNameListOfWebEl;
       
     @FindBy(xpath = "//div[@id='feed-add-post-form-tab']/span") //done
     public List<WebElement> menuOptions;
@@ -52,13 +55,13 @@ public class BasePage {
     @FindBy(css = "h1[class='oro-subtitle']")
     public WebElement pageSubTitle;
 
-
-
-
-
-
+    
     @FindBy(xpath = "//li[@data-id='menu_company']")
     public WebElement employeesMenu;
+
+
+    
+    
 
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);

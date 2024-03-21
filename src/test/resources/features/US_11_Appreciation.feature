@@ -1,4 +1,3 @@
-@wip
 Feature: User should be able to send appreciation by clicking on Appreciation tab in the Activity Stream
 
   Scenario Outline: Verify that the user can send an appreciation by filling in the mandatory fields.
