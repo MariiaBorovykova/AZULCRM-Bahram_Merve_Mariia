@@ -48,6 +48,12 @@ public class BasePage {
     @FindBy(xpath = "(//div[@class='feed-post-text-block-inner-inner'])[1]")
     public WebElement lastCreatedPost;
 
+    @FindBy(xpath = "(//div[@class='feed-item-wrap'])[1]//img")
+    public WebElement lastCreatedPostWithPicture;
+
+    @FindBy(xpath = "(//a[@class='feed-com-file-name'])[1]")
+    public WebElement lastCreatedPostWithFile;
+
     @FindBy(css = "div[class='loader-mask shown']")
     @CacheLookup
     protected WebElement loaderMask;

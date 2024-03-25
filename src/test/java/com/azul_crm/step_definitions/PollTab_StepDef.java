@@ -7,8 +7,7 @@ import com.azul_crm.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 public class PollTab_StepDef extends PollModulePage {
 
@@ -44,7 +43,11 @@ public class PollTab_StepDef extends PollModulePage {
 
     @Then("user click on Send button")
     public void user_click_on_send_button() {
-        sendButton.click();
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].scrollIntoView(true);", sendButton);
+        BrowserUtils.waitFor(1);
+        BrowserUtils.clickWithTimeOut(sendButton, 1);
+
     }
 
     @Then("user can see created post with Message title {string}")
