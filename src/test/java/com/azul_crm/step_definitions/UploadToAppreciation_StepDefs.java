@@ -14,6 +14,7 @@ public class UploadToAppreciation_StepDefs extends PollModulePage {
 
     @Then("user click on {string}")
     public void user_click_on(String titleAttribute) {
+        BrowserUtils.waitFor(2);
         getWebElementUsingTitleAttribute(titleAttribute).click();
     }
 
