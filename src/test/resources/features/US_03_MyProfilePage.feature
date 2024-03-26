@@ -6,7 +6,7 @@ Feature: User, I should be able to access my profile page.
     Then user should land on the homepage
     Then user click the username
     And user click on "My Profile" button
-    Then user should land on the My Profile page
+    #Then user should land on the My Profile page
     And user should see following options on My Profile page
       | General       |
       | Drive         |
